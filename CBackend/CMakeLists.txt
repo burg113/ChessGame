@@ -3,4 +3,4 @@ project(CBackend)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CBackend main.cpp IChessGame.cpp IChessGame.h Boardstate.cpp Boardstate.h)
+add_executable(CBackend Game/main.cpp Game/IChessGame.h Game/BoardState.cpp Game/BoardState.h Game/IPiece.h Game/GameTypes/BaseGame.cpp Game/GameTypes/BaseGame.h)

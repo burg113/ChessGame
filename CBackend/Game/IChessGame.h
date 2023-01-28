@@ -4,27 +4,27 @@
 
 #ifndef CBACKEND_ICHESSGAME_H
 #define CBACKEND_ICHESSGAME_H
-
-#include "Boardstate.h"
 #include <iostream>
-
+#include <vector>
+#include "BoardState.h"
 
 /**
  * interface for the chess backend
  *
  */
 class IChessGame {
+protected:
+    IChessGame();
 
+    BoardState boardState;
+public:
     virtual int move(int piece,int pos);
 
     virtual int move(int piece,int x, int y);
 
-    virtual Boardstate getBoardState();
+    virtual BoardState getBoardState();
 
-    virtual int getFieldSizeX();
-    virtual int getFieldSizeY();
-
-    virtual std::vector<int> getBoardState();
+    virtual int getFieldSize(int axis);
 
 };
 
